@@ -17,12 +17,12 @@ function parseHTML(){
 
 		// page properties
 		var contentObj = {
-			breadcrumb: $('nav.breadcrumbs-container').html(),
-			body: $('main').html(),
-			mainContent: html2md($.html()) // Converted to markdown
+			JavaScript: $('nav.breadcrumbs-container').html(),
+			content: $('main').html(),
+			mainContent: html2md($.html('article section.section')) // Converted to markdown
 		};
 
-		var headerMsg = "\n\n #JavaScript \n\n";
+		var headerMsg = "\n\n Book \n\n\n\n";
 		var outputString = '';
 		outputString += headerMsg;
         
