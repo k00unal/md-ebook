@@ -1,0 +1,31 @@
+{
+  "name": "md-ebook",
+  "version": "1.0.0",
+  "description": "a starter for clean ebook using md",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k00unal/md-ebook.git"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "gulp-util": "^3.0.8",
+    "through2": "^4.0.2",
+    "to-markdown": "^3.1.1",
+    "turndown": "^7.1.1",
+    "website-scraper": "^4.2.3"
+  },
+  "author": "Kunal Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k00unal/md-ebook/issues"
+  },
+  "homepage": "https://github.com/k00unal/md-ebook#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
