@@ -1,5 +1,5 @@
 const scrape = require('website-scraper'); 
-const websiteUrl = 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'; 
+const websiteUrl = ''; 
 
 scrape({ 
     urls: [websiteUrl], 
