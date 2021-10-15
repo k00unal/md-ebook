@@ -1,0 +1,16 @@
+const concat = require('gulp-concat');
+const html2txt = require('gulp-html2txt');
+
+gulp.task('concat', function(callback){
+	var stream = gulp.src('./output/html/*.html')
+		.pipe(concat('all.md'))
+		.pipe(gulp.dest('output/toc/md'))
+	return stream;
+})
+
+
+gulp.task('txt', function(){
+	gulp.src('output/test/test.html')
+	  .pipe(html2txt()) // options as in `html-to-text`
+	  .pipe(gulp.dest('output/txt/'));
+});

@@ -1,5 +1,5 @@
 const scrape = require('website-scraper'); 
-const websiteUrl = ''; 
+const websiteUrl = 'https://www.learnrxjs.io/'; 
 
 scrape({ 
     urls: [websiteUrl], 
@@ -9,9 +9,9 @@ scrape({
     recursive: true, 
     maxDepth: 50, 
     prettifyUrls: true, 
-    filenameGenerator: 'byType', 
-    // filenameGenerator: 'bySiteStructure', 
-    directory: './output/html' ,
+    // filenameGenerator: 'byType', 
+    filenameGenerator: 'bySiteStructure', 
+    directory: './scrap/book/' ,
 }).then((data) => { 
     console.log("Entire website succesfully downloaded"); 
 }).catch((err) => { 

@@ -6,6 +6,7 @@ const TurndownService = require('turndown')
 const turndownService = new TurndownService();
 
 
+
 /**
  * This method will parse the HTML of the input file and also return the specified content section as markdown.
  * @return steam The file stream passed by gulp
@@ -17,8 +18,7 @@ function parseHTML(){
 
 		// page properties
 		var contentObj = {
-			JavaScript: $('nav.breadcrumbs-container').html(),
-			content: $('main').html(),
+			content: $('article.main-page-content').html(),
 			mainContent: html2md($.html('article section.section')) // Converted to markdown
 		};
 
@@ -34,16 +34,20 @@ function parseHTML(){
 				outputString += row + ': ' + contentObj[row] + '\n';
 			}
 		}
-
-        
-		const markdown = turndownService.turndown(outputString)
 		
+		
+		//  console.log($('nav.breadcrumbs-container').html());
+
+        // for htm to md conversion
+		const markdown = turndownService.turndown(outputString)
 		
 		if (file.contents.length){
 			file.contents = new Buffer(markdown);
 		}
 
 		file.path = gutil.replaceExtension(file.path, '.md');
+        
+		
 
 		cb(null,file);
 	});
